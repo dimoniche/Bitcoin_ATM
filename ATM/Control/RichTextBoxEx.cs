@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public partial class RichTextBoxEx : RichTextBox
     {

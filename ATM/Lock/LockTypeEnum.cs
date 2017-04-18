@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
 	public enum LockTypeEnum
 	{

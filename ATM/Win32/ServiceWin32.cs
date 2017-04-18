@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public static class ServiceWin32
     {

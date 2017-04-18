@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public static class Globals
     {

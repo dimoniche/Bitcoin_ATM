@@ -1,10 +1,10 @@
-﻿using ServiceSaleMachine;
+﻿using ATM;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
 	/// <summary>
 	/// Выполняет чистку старых файлов

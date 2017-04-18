@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ATM.Client
 {
-    public partial class ClientForm : Form
+    public partial class ClientForm : MyForm
     {
         public ClientForm()
         {

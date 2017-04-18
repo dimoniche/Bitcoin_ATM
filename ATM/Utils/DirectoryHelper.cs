@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
 	public static class DirectoryHelper
 	{

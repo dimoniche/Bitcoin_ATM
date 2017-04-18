@@ -1,4 +1,4 @@
-﻿namespace ServiceSaleMachine
+﻿namespace ATM
 {
     partial class RichTextBoxEx
     {

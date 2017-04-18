@@ -2,11 +2,11 @@
 using System.Linq;
 using Microsoft.Win32;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public class RegistrySettings
     {
-        public const string RegistryPathUninstall = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\ServiceSaleMachine";
+        public const string RegistryPathUninstall = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\ATM";
 
         public string InstallPath { get; private set; }
         //public VspInstallType InstallType { get; private set; }

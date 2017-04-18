@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public partial class ServiceTabControl : UserControl
     {

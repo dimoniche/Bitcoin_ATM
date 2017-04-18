@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1F52424-7717-459D-A0CC-A69F1EDFE105}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drivers</RootNamespace>
+    <AssemblyName>Drivers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCNET\BillNominal.cs" />
+    <Compile Include="CCNET\CCNETCommandEnum.cs" />
+    <Compile Include="CCNET\CCNETSequence.cs" />
+    <Compile Include="CCNET\CCOMPort.cs" />
+    <Compile Include="CCNET\CCRSProtocol.cs" />
+    <Compile Include="CCNET\_BillRecord.cs" />
+    <Compile Include="CCNET\_Cassete.cs" />
+    <Compile Include="CCNET\_PollResults.cs" />
+    <Compile Include="CCNET\Command.cs" />
+    <Compile Include="CCNET\_BillStatus.cs" />
+    <Compile Include="CCNET\_Identification.cs" />
+    <Compile Include="CCNET\_Time.cs" />
+    <Compile Include="Events\ServiceClientResponseEventArgs.cs" />
+    <Compile Include="MachineDrivers.cs" />
+    <Compile Include="Events\Message.cs" />
+    <Compile Include="Enums\MessageEndPoint.cs" />
+    <Compile Include="Modem\Modem.cs" />
+    <Compile Include="Printer\ESC_POS.cs" />
+    <Compile Include="Printer\PaperEnableEnum.cs" />
+    <Compile Include="Printer\printerStatus.cs" />
+    <Compile Include="Printer\PrinterStatusEnum.cs" />
+    <Compile Include="Printer\RawPrinterHelper.cs" />
+    <Compile Include="Zebex\Zebex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zebex\ZebexCommandEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ATM\ATM.csproj">
+      <Project>{5cdb5513-96e8-4266-8b72-83679284b4e8}</Project>
+      <Name>ATM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

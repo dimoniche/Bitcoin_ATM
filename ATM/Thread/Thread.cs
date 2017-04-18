@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Threading;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
 	public class SaleThread : Component
 	{

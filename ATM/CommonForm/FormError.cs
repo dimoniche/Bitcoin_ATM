@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ServiceSaleMachine
+namespace ATM
 {
     public partial class FormError : MyForm
     {

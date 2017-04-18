@@ -1,4 +1,4 @@
-﻿namespace ServiceSaleMachine
+﻿namespace ATM
 {
     public class MoneyStatistic
     {
