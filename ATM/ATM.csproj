@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CDB5513-96E8-4266-8B72-83679284B4E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceSaleMachine</RootNamespace>
+    <AssemblyName>ServiceSaleMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Check\CheckHelper.cs" />
+    <Compile Include="ClearFile\ClearFilesControlServiceTask.cs" />
+    <Compile Include="CommonForm\FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForm\FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\DefaultValueObject.cs" />
+    <Compile Include="Common\UserException.cs" />
+    <Compile Include="Configuration\CheckConfiguration.cs" />
+    <Compile Include="Configuration\CheckConfigurationProperties.cs" />
+    <Compile Include="Control\DeviceTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\DeviceTabControl.Designer.cs">
+      <DependentUpon>DeviceTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RichTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\RichTextBoxEx.Designer.cs">
+      <DependentUpon>RichTextBoxEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ScalableLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\ServiceTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ServiceTabControl.Designer.cs">
+      <DependentUpon>ServiceTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MoneyStatistic.cs" />
+    <Compile Include="Form\Common\Keyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Common\Keyboard.Designer.cs">
+      <DependentUpon>Keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Defines.cs" />
+    <Compile Include="Form\FormManager.cs" />
+    <Compile Include="Form\MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ValidateDataMessage.cs" />
+    <Compile Include="Form\ValidateDataResult.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Hardware\ComPortSpeedEnum.cs" />
+    <Compile Include="Lock\LockObject.cs" />
+    <Compile Include="Lock\LockTicket.cs" />
+    <Compile Include="Lock\LockTypeEnum.cs" />
+    <Compile Include="Logger\Log.cs" />
+    <Compile Include="Logger\LogMessageType.cs" />
+    <Compile Include="Logger\LogMessageTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\PathEnum.cs" />
+    <Compile Include="Configuration\RegistrySettings.cs" />
+    <Compile Include="Thread\Thread.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thread\ThreadCompleteEventArgs.cs" />
+    <Compile Include="Thread\ThreadProgressChangedEventArgs.cs" />
+    <Compile Include="Thread\ThreadWorkEventArgs.cs" />
+    <Compile Include="Users\UserRole.cs" />
+    <Compile Include="Utils\GifImage.cs" />
+    <Compile Include="Utils\SerialPortHelper.cs" />
+    <Compile Include="Utils\DirectoryHelper.cs" />
+    <Compile Include="Utils\FileHelper.cs" />
+    <Compile Include="Utils\RegServiceActionEnum.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Win32\ServiceWin32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonForm\FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\DeviceTabControl.resx">
+      <DependentUpon>DeviceTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RichTextBoxEx.resx">
+      <DependentUpon>RichTextBoxEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ServiceTabControl.resx">
+      <DependentUpon>ServiceTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Common\Keyboard.resx">
+      <DependentUpon>Keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
