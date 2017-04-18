@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ATM.Client</RootNamespace>
     <AssemblyName>ATM.Client</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,7 +66,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,9 +80,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ATM.Drivers\ATM.Drivers.csproj">
+      <Project>{d1f52424-7717-459d-a0cc-a69f1edfe105}</Project>
+      <Name>ATM.Drivers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ATM\ATM.csproj">
       <Project>{5cdb5513-96e8-4266-8b72-83679284b4e8}</Project>
       <Name>ATM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitcoinUtilities.NET\BitcoinUtilities.NET.csproj">
+      <Project>{e054c08c-8b6e-4767-999b-f7de5f8a1e94}</Project>
+      <Name>BitcoinUtilities.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyCore.NET\KeyCore.NET.csproj">
+      <Project>{c4dea306-79e2-4154-9f46-ec1d22530850}</Project>
+      <Name>KeyCore.NET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
